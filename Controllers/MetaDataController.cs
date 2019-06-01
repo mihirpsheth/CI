@@ -1,10 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.IO;
 using System.Linq;
+using System.Reflection;
+using System.Text;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Newtonsoft.Json;
 
 namespace WebApplication8.Controllers
 {
@@ -16,17 +20,21 @@ namespace WebApplication8.Controllers
         [HttpGet]
         public IEnumerable<string> Get()
         {
-            //Version version = Assembly.GetEntryAssembly().GetName().Version;
-            System.Reflection.Assembly assembly = System.Reflection.Assembly.GetExecutingAssembly();
-            FileVersionInfo fvi = FileVersionInfo.GetVersionInfo(@"C:\Users\mshet\source\repos\Demo\Demo\bin\Demo.dll");
-            FileVersionInfo fviName = FileVersionInfo.GetVersionInfo(@"C:\Users\mshet\source\repos\Demo\Demo\bin\Demo.dll");
-            string version = fvi.FileVersion;
-            //var i = version.Major;
-            //"C:\Users\mshet\Desktop\MyWebApplication\.git\refs\heads\master"
+            
+            System.Reflection.Assembly asbly = System.Reflection.Assembly.GetExecutingAssembly();
+            FileVersionInfo projInfo = FileVersionInfo.GetVersionInfo(asbly.Location);
+            string version = projInfo.FileVersion;
+            string appName = projInfo.FileDescription;
+            string commitSHA = String.Empty;
+            using (Stream stream = Assembly.GetExecutingAssembly()
+                    .GetManifestResourceStream("WebApplication8." + "version.txt"))
+            using (StreamReader reader = new StreamReader(stream))
+            {
+                commitSHA = reader.ReadLine();
+            }
 
-            return new string[] { "value1", "value2", fviName + ": " + version.ToString() };
-
+            return new string[] { "Version: " + version + ", Application Description: " + appName + ", lastcommitsha: " + commitSHA};
+            //return new string[] { "value1", "value2", fviName + ": " + version1.ToString() };
         }
-
     }
 }
