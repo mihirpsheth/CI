@@ -46,4 +46,8 @@
     </EmbeddedResource>
   </ItemGroup>
 
+  <Target Name="PreBuild" BeforeTargets="PreBuildEvent">
+    <Exec Command="git rev-parse HEAD &gt; &quot;$(ProjectDir)\version.txt&quot;" />
+  </Target>
+
 </Project>

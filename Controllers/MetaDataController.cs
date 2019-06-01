@@ -22,7 +22,7 @@ namespace WebApplication8.Controllers
             FileVersionInfo fviName = FileVersionInfo.GetVersionInfo(@"C:\Users\mshet\source\repos\Demo\Demo\bin\Demo.dll");
             string version = fvi.FileVersion;
             //var i = version.Major;
-
+            //"C:\Users\mshet\Desktop\MyWebApplication\.git\refs\heads\master"
 
             return new string[] { "value1", "value2", fviName + ": " + version.ToString() };
 
