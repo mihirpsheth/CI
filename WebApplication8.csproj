@@ -46,6 +46,11 @@
     </EmbeddedResource>
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="NewFolder1\" />
+    <Folder Include="NewFolder\" />
+  </ItemGroup>
+
   <Target Name="PreBuild" BeforeTargets="PreBuildEvent">
     <Exec Command="git rev-parse HEAD &gt; &quot;$(ProjectDir)\version.txt&quot;" />
   </Target>
