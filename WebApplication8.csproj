@@ -11,8 +11,19 @@
     <RepositoryUrl>https://github.com/mihirpsheth/HelloWorld/tree/v1.0</RepositoryUrl>
     <PackageTags>Hello World</PackageTags>
     <Description>Pre Tech</Description>
+	<MvcRazorExcludeRefAssembliesFromPublish>false</MvcRazorExcludeRefAssembliesFromPublish>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+    <TypeScriptToolsVersion>3.1</TypeScriptToolsVersion>
   </PropertyGroup>
 
+  <PropertyGroup Label="Globals">
+   <SccProjectName>SAK</SccProjectName>
+   <SccProvider>SAK</SccProvider>
+   <SccAuxPath>SAK</SccAuxPath>
+   <SccLocalPath>SAK</SccLocalPath>
+   <EnableDefaultContentItems>true</EnableDefaultContentItems>
+ </PropertyGroup>
+ 
   <ItemGroup>
     <None Remove="version.txt" />
   </ItemGroup>

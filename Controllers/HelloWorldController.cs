@@ -18,6 +18,13 @@ namespace WebApplication8.Controllers
         {
             return Ok("Hello World");
         }
+        
+        // GET api/values/5
+        [HttpGet("{id}")]
+        public ActionResult<string> Get(int id)
+        {
+            return "Hello World";
+        }
 
     }
 }
