@@ -11,11 +11,14 @@ Hello World is a sample program which is written in C# .net core, it triggers pi
 ## Prerequisites
 
 The application being .net core app, you will need to install [.NET Core Windows Server Hosting Bundle](https://dotnet.microsoft.com/download/dotnet-core/2.2) 
+
 Add a new application pool with .Net CLR version as "No Managed Code"
+
+[![](https://github.com/mihirpsheth/CI/blob/master/Raw/AppPool.png)](https://github.com/mihirpsheth/CI/blob/master/Raw/AppPool.png)
 
 ## Deploy
 
-Using Deloy -> Import Application, import the package file and change the appliction pool to the application pool which support No Managed code (the one created in prerequisites).
+Using Deloy -> Import Application, import the [package file](https://github.com/mihirpsheth/CI/blob/master/HelloWorld.zip) and change the appliction pool of the application deployed to the application pool which support No Managed code (the one created in prerequisites).
 
 ## API
 
