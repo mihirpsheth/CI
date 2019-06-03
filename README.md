@@ -47,7 +47,7 @@ Note: Report Endpoint intentionally fails for demonstration purpose.
 
 ## Build
 
-Using Travis CI, the auto build is triggered, see Build Status.
+Using Travis CI, the auto build is triggered, see Build Status or visit [Travis-CI Page](https://travis-ci.org/mihirpsheth/CI)
 
 ## Regression Test
 
