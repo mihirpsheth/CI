@@ -21,7 +21,7 @@ Using Deloy -> Import Application, import the package file and change the applic
 
 **Hello World Endpoint** : [base-url]/api/HelloWorld
 
-[![Hello World API](https://github.com/mihirpsheth/CI/blob/master/Raw/HelloWorldAP "Hello World API")](https://github.com/mihirpsheth/CI/blob/master/Raw/HelloWorldAP "Hello World API")
+[![Hello World API](https://github.com/mihirpsheth/CI/blob/master/Raw/HelloWorldAPI.png "Hello World API")](https://github.com/mihirpsheth/CI/blob/master/Raw/HelloWorldAPI.png "Hello World API")
 
 **Metadata Endpoint** : [base-url]/api/Metadata
 
