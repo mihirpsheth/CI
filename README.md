@@ -1,8 +1,14 @@
 # Hello World
 
 
-## Build Status
+## Build Status from Travis CI
 [![Build Status](https://travis-ci.org/mihirpsheth/CI.svg?branch=master)](https://travis-ci.org/mihirpsheth/CI)
+
+
+## Build Status from Azure Pipelines
+[![Build Status](https://dev.azure.com/mihiroffer/CI/_apis/build/status/mihirpsheth.CI?branchName=master)](https://dev.azure.com/mihiroffer/CI/_build/latest?definitionId=1&branchName=master)
+
+=============
 
 ## About
 
