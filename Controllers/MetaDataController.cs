@@ -27,7 +27,8 @@ namespace WebApplication8.Controllers
             string appName = projInfo.FileDescription;
             string commitSHA = String.Empty;
             using (Stream stream = Assembly.GetExecutingAssembly()
-                    .GetManifestResourceStream("WebApplication8." + "version.txt"))
+                    //.GetManifestResourceStream("WebApplication8." + "version.txt"))
+                    .GetManifestResourceStream("WebApplication8." + @".git\refs\heads\master"))
             using (StreamReader reader = new StreamReader(stream))
             {
                 commitSHA = reader.ReadLine();

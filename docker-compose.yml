@@ -1,0 +1,10 @@
+version: '3.4'
+
+services:
+  webapplication8:
+    image: mihirsheth/webapplication8
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports: 
+    - '80:5000'

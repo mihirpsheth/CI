@@ -8,7 +8,6 @@
 ## Build Status from Azure Pipelines
 [![Build Status](https://dev.azure.com/mihiroffer/CI/_apis/build/status/mihirpsheth.CI?branchName=master)](https://dev.azure.com/mihiroffer/CI/_build/latest?definitionId=1&branchName=master)
 
-=============
 
 ## About
 

@@ -9,7 +9,7 @@
     <Product>Hello World</Product>
     <PackageProjectUrl>https://github.com/mihirpsheth/HelloWorld/</PackageProjectUrl>
     <RepositoryUrl>https://github.com/mihirpsheth/HelloWorld/tree/v1.0</RepositoryUrl>
-    <PackageTags>Hello World</PackageTags>
+    <PackageTags>mihirsheth/webapplication8</PackageTags>
     <Description>Pre Tech</Description>
 	<MvcRazorExcludeRefAssembliesFromPublish>false</MvcRazorExcludeRefAssembliesFromPublish>
     <TargetFramework>netcoreapp2.2</TargetFramework>
@@ -23,15 +23,20 @@
    <SccLocalPath>SAK</SccLocalPath>
    <EnableDefaultContentItems>true</EnableDefaultContentItems>
  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="NewFolder1\**" />
+    <Compile Remove="NewFolder\**" />
+    <Content Remove="NewFolder1\**" />
+    <Content Remove="NewFolder\**" />
+    <EmbeddedResource Remove="NewFolder1\**" />
+    <EmbeddedResource Remove="NewFolder\**" />
+    <None Remove="NewFolder1\**" />
+    <None Remove="NewFolder\**" />
+  </ItemGroup>
  
   <ItemGroup>
     <None Remove="version.txt" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <EmbeddedResource Include="version.txt">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </EmbeddedResource>
   </ItemGroup>
 
   <ItemGroup>
@@ -56,14 +61,5 @@
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="NewFolder1\" />
-    <Folder Include="NewFolder\" />
-  </ItemGroup>
-
-  <Target Name="PreBuild" BeforeTargets="PreBuildEvent">
-    <Exec Command="git rev-parse HEAD &gt; &quot;$(ProjectDir)\version.txt&quot;" />
-  </Target>
 
 </Project>
