@@ -5,6 +5,7 @@
 
 trigger:
 - master
+- Docker
 
 pool:
   vmImage: 'ubuntu-latest'
